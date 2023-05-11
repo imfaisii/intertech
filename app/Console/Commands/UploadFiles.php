@@ -59,7 +59,9 @@ class UploadFiles extends Command
                 'status'=>1,
                 ]);
                 if(array_key_exists('slides',$file_content))
-                $course->slides()->updateOrCreate([
+                $course->slides()->updateOrCreate(
+                    ['title'=>$file_content['title']],[
+                    'headline'=>$file_content['headline'],
                     'slide' => json_encode($file_content['slides']),
                 ]);
             }

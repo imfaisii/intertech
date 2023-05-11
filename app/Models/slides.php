@@ -15,6 +15,8 @@ class slides extends Model
         'id',
        'slide',
        'course_id',
+       'title',
+       'headline',
        'updated_at',
         'created_at',
     ];
